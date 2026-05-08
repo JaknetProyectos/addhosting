@@ -1,0 +1,357 @@
+{
+  "cart": {
+    "header": {
+      "titlePrefix": "Tu",
+      "titleHighlight": "Carrito"
+    },
+    "success": {
+      "title": "¡Transacción Exitosa!",
+      "description": "Tu pedido ha sido procesado con la red de seguridad activa.",
+      "orderIdLabel": "ID:",
+      "emailSent": "✓ Confirmación enviada a tu bandeja de entrada.",
+      "emailFailed": "⚠ Pago confirmado, pero el servicio de mensajería está saturado.",
+      "backHome": "Volver al inicio"
+    },
+    "empty": {
+      "title": "El carrito está vacío",
+      "description": "Parece que aún no has seleccionado ningún plan de poder.",
+      "cta": "Explorar Planes"
+    },
+    "review": {
+      "title": "Revisión de Orden",
+      "clearAll": "Limpiar todo",
+      "sku": "SKU:"
+    },
+    "shipping": {
+      "title": "Información de Envio",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Email Corporativo / Personal",
+      "phone": "Teléfono",
+      "postalCode": "Código Postal",
+      "address": "Dirección Completa",
+      "city": "Ciudad",
+      "state": "Estado"
+    },
+    "payment": {
+      "title": "Método de Pago Seguro",
+      "cardName": "Nombre en la Tarjeta",
+      "cardNumber": "Número de Tarjeta",
+      "cardNumberPlaceholder": "0000 0000 0000 0000",
+      "expiration": "Expiración (Mes/Año)",
+      "cvv": "CVV"
+    },
+    "summary": {
+      "titlePrefix": "Resumen",
+      "titleHighlight": "Total",
+      "subtotal": "Subtotal",
+      "iva": "IVA (16%)",
+      "totalLabel": "Total a pagar",
+      "secureConnection": "Conexión Segura",
+      "currencyLabel": "Divisa de Pago",
+      "currencyMXN": "Peso Mexicano (MXN)",
+      "currencyUSD": "Dólar Americano (USD)",
+      "processing": "Procesando...",
+      "checkout": "Finalizar Compra"
+    },
+    "errors": {
+      "firstNameRequired": "Ingresa el nombre.",
+      "lastNameRequired": "Ingresa el apellido.",
+      "emailRequired": "Ingresa el correo electrónico.",
+      "emailInvalid": "Correo inválido.",
+      "phoneRequired": "Ingresa el teléfono.",
+      "phoneInvalid": "El teléfono debe tener entre 7 y 15 dígitos.",
+      "addressRequired": "Ingresa la dirección.",
+      "cityRequired": "Ingresa la ciudad.",
+      "stateRequired": "Ingresa el estado.",
+      "countryRequired": "Selecciona el país.",
+      "postalCodeRequired": "Ingresa el código postal.",
+      "postalCodeInvalid": "El CP debe tener entre 4 y 6 dígitos.",
+      "currencyRequired": "Selecciona la moneda.",
+      "cardNameRequired": "Ingresa el nombre del titular.",
+      "cardNumberRequired": "Ingresa el número de tarjeta.",
+      "cardNumberInvalid": "La tarjeta debe tener exactamente 16 dígitos.",
+      "cardMonthRequired": "Ingresa el mes.",
+      "cardMonthInvalid": "Mes inválido (01-12).",
+      "cardYearRequired": "Ingresa el año.",
+      "cardYearInvalid": "El año debe tener 4 dígitos.",
+      "cvvRequired": "Ingresa el CVV.",
+      "cvvInvalid": "El CVV debe tener 3 o 4 dígitos.",
+      "cartEmpty": "Tu carrito está vacío.",
+      "transactionError": "Hubo un problema al procesar la transacción."
+    }
+  },
+  "Navigation": {
+    "brand": {
+      "infrastructure": "Infraestructura Premium"
+    },
+    "nav": {
+      "home": "Inicio",
+      "about": "Nosotros",
+      "services": "Servicios",
+      "plans": "Planes",
+      "contact": "Contacto"
+    },
+    "languages": {
+      "en": "Inglés",
+      "es": "Español"
+    },
+    "mobile": {
+      "selectLanguage": "Seleccionar Idioma"
+    }
+  },
+  "HeroSection": {
+    "badge": "Bienvenido",
+    "title": {
+      "before": "Soluciones de Hosting de",
+      "highlight": "Confianza"
+    },
+    "description": "Nuestro equipo de expertos <white>Jedi</white> está comprometido a brindarte el mejor servicio, asegurando que tu sitio web esté siempre disponible y funcione a la perfección, como un <green>droide</green> bien afinado en la red.",
+    "buttons": {
+      "startProject": "Iniciar Proyecto",
+      "viewPlans": "Ver Planes"
+    },
+    "scroll": "Scroll",
+    "imageAlt": "Infrastructure Rocket"
+  },
+  "ServicesSection": {
+    "badge": "Core Infrastructure",
+    "title": {
+      "before": "Nuestros",
+      "highlight": "Servicios"
+    },
+    "description": "Soluciones de despliegue rápido con redundancia garantizada."
+  },
+  "WhyChooseUsSection": {
+    "badge": "A un paso de la innovación",
+    "title": {
+      "before": "¿Por qué",
+      "highlight": "Elegirnos"
+    },
+    "description": "En <white>Add Host</white>, nos destacamos por nuestra atención de primera clase, tecnología de vanguardia y precios competitivos. Como los guardianes de tu presencia digital, nos esforzamos por ofrecerte un servicio tan fiable como un <green>droide astromecánico</green> y tan eficiente como un <orange>salto al hiperespacio</orange>.",
+    "benefits": {
+      "support": "Soporte Estelar",
+      "security": "Seguridad Avanzada",
+      "uptime": "99.9% Uptime Garantizado"
+    },
+    "verified": "Verificado",
+    "cta": "Contrata Ahora",
+    "status": {
+      "label": "Status",
+      "value": "All Systems GO"
+    }
+  },
+  "PlansSection": {
+    "badge": "High Performance Units",
+    "title": {
+      "before": "Nuestros",
+      "highlight": "Planes"
+    },
+    "description": "Diseñados para satisfacer las necesidades de diferentes tipos de negocios, desde los que recién comienzan hasta corporaciones que buscan maximizar su potencia en línea. <italic>¡Que la fuerza de Add Host te acompañe!</italic>",
+    "recommended": "Recomendado",
+    "plusVat": "+ IVA",
+    "specifications": "Especificaciones",
+    "addToCart": "Añadir al Carrito",
+    "custom": {
+      "title": {
+        "before": "Proyecto",
+        "highlight": "Especial"
+      },
+      "description": "Costo personalizado según demanda técnica.",
+      "button": "Solicitar Cotización"
+    }
+  },
+  "AdditionalServices": {
+    "title1": "Módulos de",
+    "titleHighlight": "Servicio",
+    "description": "Expande las capacidades de tu infraestructura. Herramientas diseñadas para optimizar, asegurar y escalar tu presencia digital al máximo nivel.",
+    "addons": "Add-ons Disponibles",
+    "status": "Status: Ready to Deploy",
+    "serial": "Serial:",
+    "addToCart": "Añadir al Carrito"
+  },
+  "FAQ": {
+    "badge": "Data Retrieval / FAQ",
+    "title": "Preguntas",
+    "titleHighlight": "Frecuentes",
+    "description": "Protocolos de consulta rápida para resolver tus dudas técnicas sobre nuestra infraestructura y servicios galácticos.",
+    "knowledgeBase": "Knowledge_Base v2.0",
+    "imageAlt": "Base de conocimiento del sistema"
+  },
+  "Footer": {
+    "mission": "Nuestro equipo de expertos Jedi está comprometido a brindarte el mejor servicio, asegurando que tu sitio web esté siempre disponible y funcione a la perfección, como un droide bien afinado en el corazón de la red.",
+    "navigation": "Navegación",
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "plans": "Planes",
+    "contact": "Contacto",
+    "infrastructure": "Infraestructura",
+    "sharedHosting": "Hosting Compartido",
+    "vpsHosting": "VPS Hosting",
+    "dedicatedHosting": "Hosting Dedicado",
+    "hqTerminal": "HQ Terminal",
+    "securePayments": "Pagos Seguros Aceptados",
+    "pciCompliant": "Compatible con PCI-DSS",
+    "copyright": "Todos los derechos reservados.",
+    "refund": "Reembolso",
+    "terms": "Términos",
+    "privacy": "Privacidad",
+    "refundPolicy": "Política de Reembolso",
+    "termsPolicy": "Política de Términos",
+    "privacyPolicy": "Política de Privacidad",
+    "secureTerminal": "Terminal Segura"
+  },
+  "ContactPage": {
+    "hero": {
+      "badge": "Canal de Comunicación / Uplink",
+      "title": "Canal de <orange>Contacto</orange><green>.</green>",
+      "description": "¿Tienes alguna pregunta o necesitas asistencia técnica? Establece un enlace con nuestro equipo de soporte. Estamos listos para ayudarte."
+    },
+    "form": {
+      "title": "Enviar Transmisión",
+      "nameLabel": "Identidad / Nombre",
+      "namePlaceholder": "Ingresa tu nombre",
+      "emailLabel": "Uplink / Email",
+      "emailPlaceholder": "tu@servidor.com",
+      "subjectLabel": "Asunto de Consulta",
+      "subjectPlaceholder": "Ej. Soporte Técnico / Ventas",
+      "messageLabel": "Cuerpo del Mensaje",
+      "messagePlaceholder": "Escribe tu mensaje técnico...",
+      "submit": "Ejecutar Envío"
+    },
+    "success": {
+      "title": "¡Mensaje Recibido!",
+      "description": "Protocolo de respuesta iniciado."
+    },
+    "contact": {
+      "title": "Nodos de Contacto",
+      "phoneTitle": "Frecuencia Telefónica",
+      "emailTitle": "Enlace de Correo",
+      "addressTitle": "Coordenadas HQ"
+    },
+    "status": {
+      "online": "Soporte Online",
+      "response": "Tiempo de Respuesta: < 2h",
+      "server": "Estado del Servidor",
+      "optimal": "ÓPTIMO"
+    },
+    "alert": {
+      "errorTitle": "Error",
+      "errorMessage": "Error en el protocolo de envío"
+    }
+  },
+  "AboutPage": {
+    "hero": {
+      "badge": "Data Intel / Quiénes Somos",
+      "title": "Sobre <orange>Nosotros</orange><green>.</green>"
+    },
+    "imageAlt": "Infraestructura Central",
+    "floatingBadge": "Core Active",
+    "content": {
+      "title": "Por Qué Elegirnos",
+      "description": "En Add Host, nos destacamos por nuestra atención de primera clase, tecnología de vanguardia y precios competitivos. Como los guardianes de tu presencia digital, nos esforzamos por ofrecerte un servicio tan fiable como un <green>droide astromecánico</green> y tan eficiente como un <orange>salto al hiperespacio</orange>."
+    },
+    "benefits": {
+      "title": "Ventajas de Despliegue",
+      "items": {
+        "support": "Soporte Estelar",
+        "security": "Seguridad Avanzada",
+        "uptime": "99.9% de Uptime Garantizado"
+      }
+    }
+  },
+  "customPage": {
+    "badge": "Personalización de Protocolo v2.0",
+    "title": {
+      "part1": "Plan",
+      "highlight": "Personalizado"
+    },
+    "description": "Ingresa los parámetros de tu cotización especial para proceder con el enlace de pago seguro. Verifica que tu número de folio coincida con el emitido por tu asesor.",
+    "imageAlt": "Unidad de infraestructura",
+    "securePayment": "Enlace de Pago Encriptado",
+    "currency": {
+      "label": "Divisa de Transacción",
+      "mxn": "Peso Mexicano (MXN)",
+      "usd": "Dólar Americano (USD)"
+    },
+    "paymentType": {
+      "label": "Método de Aplicación",
+      "total": "Pago de Liquidación Total",
+      "partial": "Abono / Pago Parcial"
+    },
+    "folio": {
+      "label": "Código de Folio de Autorización",
+      "placeholder": "Ej. 10293-AX"
+    },
+    "amount": {
+      "label": "Monto Final a Liquidar"
+    },
+    "button": "Agregar al Carrito",
+    "footer": {
+      "systemsReady": "Sistemas Listos"
+    },
+    "alerts": {
+      "errorTitle": "Error",
+      "incompleteProtocol": "Protocolo incompleto. Completa todos los campos de acceso",
+      "invalidAmount": "Monto de transacción inválido"
+    },
+    "cart": {
+      "totalPayment": "Plan personalizado con pago Total",
+      "partialPayment": "Plan personalizado con pago Parcial",
+      "folio": "Folio",
+      "currency": "Moneda"
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "badge": "Catálogo de Servicios v4.0",
+      "title": "Nuestros <orange>Servicios</orange><green>.</green>",
+      "description": "Descubre nuestra gama de infraestructura diseñada para satisfacer las necesidades de cualquier proyecto digital en la galaxia."
+    },
+    "shared": {
+      "class": "[ CLASE: PADAWAN ]",
+      "title": "Hosting <orange>Compartido</orange>",
+      "description": "Ideal para quienes inician su travesía. Proporcionamos un entorno amigable y recursos optimizados para que tu sitio despegue con la agilidad de un caza estelar, manteniendo costos eficientes para pequeñas y medianas empresas.",
+      "button": "Desplegar Unidad",
+      "imageAlt": "Hosting Compartido"
+    },
+    "vps": {
+      "class": "[ CLASE: JEDI KNIGHT ]",
+      "title": "VPS <green>Hosting</green>",
+      "description": "Control total sobre tu entorno. Personaliza tu servidor como si construyeras tu propio sable de luz. Obtén recursos dedicados y la flexibilidad necesaria para proyectos que exigen un alto rendimiento en la batalla digital.",
+      "button": "Solicitar Acceso",
+      "imageAlt": "VPS Hosting"
+    },
+    "dedicated": {
+      "class": "[ CLASE: STAR BASE ]",
+      "title": "Hosting <orange>Dedicado</orange>",
+      "description": "La fuerza definitiva. Máxima potencia para grandes volúmenes de tráfico y seguridad de grado militar. Es como tener tu propia base estelar lista para enfrentar cualquier desafío masivo en el espacio cibernético.",
+      "button": "Configurar Base",
+      "imageAlt": "Hosting Dedicado"
+    }
+  },
+  "cartDrawer": {
+    "header": {
+      "title": "Manifiesto de Carga",
+      "session": "ID de Sesión Segura:"
+    },
+    "empty": {
+      "title": "Almacén Vacío",
+      "description": "Esperando asignación de recursos..."
+    },
+    "item": {
+      "serial": "Serial:",
+      "tax": "+ IVA"
+    },
+    "footer": {
+      "total": "Créditos Totales",
+      "taxNote": "Sujeto a impuestos de red",
+      "checkout": "Procesar Transacción",
+      "clear": "Abortar Operación (Vaciar)"
+    },
+    "button": {
+      "openCart": "Abrir carrito"
+    }
+  }
+}
