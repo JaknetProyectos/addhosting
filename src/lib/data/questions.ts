@@ -1,7 +1,7 @@
 export const faqsSpanish = [
     {
-        question: "Que hace a Add Host diferente de otros proveedores de hosting?",
-        answer: "En Add Host, nos sentimos como la Alianza Rebelde en la lucha por un servicio superior. Ofrecemos soporte estelar, uptime garantizado y seguridad avanzada, todo a precios competitivos. Nos comprometemos a ser tus aliados en cada paso del camino.",
+        question: "Que hace a Sistemas Avante diferente de otros proveedores de hosting?",
+        answer: "En Sistemas Avante, nos sentimos como la Alianza Rebelde en la lucha por un servicio superior. Ofrecemos soporte estelar, uptime garantizado y seguridad avanzada, todo a precios competitivos. Nos comprometemos a ser tus aliados en cada paso del camino.",
     },
     {
         question: "Como puedo contactar al equipo de soporte?",
@@ -9,11 +9,11 @@ export const faqsSpanish = [
     },
     {
         question: "Que medidas de seguridad utilizan para proteger mi sitio web?",
-        answer: "En Add Host, utilizamos una combinacion de tecnologias avanzadas, como firewalls, encriptacion y monitoreo constante, para proteger tu sitio web. Considera nuestras medidas de seguridad como un escudo deflector que mantiene a raya cualquier amenaza del Lado Oscuro.",
+        answer: "En Sistemas Avante, utilizamos una combinacion de tecnologias avanzadas, como firewalls, encriptacion y monitoreo constante, para proteger tu sitio web. Considera nuestras medidas de seguridad como un escudo deflector que mantiene a raya cualquier amenaza del Lado Oscuro.",
     },
     {
-        question: "Cual es el proceso para migrar mi sitio web a Add Host?",
-        answer: "Migrar tu sitio web a Add Host es tan sencillo como pilotar un caza estelar con un buen copiloto. Nuestro equipo de expertos se encargara de todo el proceso de migracion para que puedas enfocarte en lo que realmente importa: hacer crecer tu negocio.",
+        question: "Cual es el proceso para migrar mi sitio web a Sistemas Avante?",
+        answer: "Migrar tu sitio web a Sistemas Avante es tan sencillo como pilotar un caza estelar con un buen copiloto. Nuestro equipo de expertos se encargara de todo el proceso de migracion para que puedas enfocarte en lo que realmente importa: hacer crecer tu negocio.",
     },
     {
         question: "Que significa el 99.9% de uptime garantizado?",
@@ -23,8 +23,8 @@ export const faqsSpanish = [
 
 export const faqsEnglish = [
     {
-        question: "What makes Add Host different from other hosting providers?",
-        answer: "At Add Host, we see ourselves as the Rebel Alliance in the fight for superior service. We offer stellar support, guaranteed uptime, and advanced security, all at competitive prices. We are committed to being your allies every step of the way.",
+        question: "What makes Sistemas Avante different from other hosting providers?",
+        answer: "At Sistemas Avante, we see ourselves as the Rebel Alliance in the fight for superior service. We offer stellar support, guaranteed uptime, and advanced security, all at competitive prices. We are committed to being your allies every step of the way.",
     },
     {
         question: "How can I contact the support team?",
@@ -32,11 +32,11 @@ export const faqsEnglish = [
     },
     {
         question: "What security measures do you use to protect my website?",
-        answer: "At Add Host, we use a combination of advanced technologies such as firewalls, encryption, and constant monitoring to protect your website. Think of our security measures as a deflector shield that keeps any threat from the Dark Side at bay.",
+        answer: "At Sistemas Avante, we use a combination of advanced technologies such as firewalls, encryption, and constant monitoring to protect your website. Think of our security measures as a deflector shield that keeps any threat from the Dark Side at bay.",
     },
     {
-        question: "What is the process for migrating my website to Add Host?",
-        answer: "Migrating your website to Add Host is as simple as piloting a starfighter with a good co-pilot. Our team of experts will handle the entire migration process so you can focus on what really matters: growing your business.",
+        question: "What is the process for migrating my website to Sistemas Avante?",
+        answer: "Migrating your website to Sistemas Avante is as simple as piloting a starfighter with a good co-pilot. Our team of experts will handle the entire migration process so you can focus on what really matters: growing your business.",
     },
     {
         question: "What does the 99.9% guaranteed uptime mean?",

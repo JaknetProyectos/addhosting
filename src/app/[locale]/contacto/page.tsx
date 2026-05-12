@@ -73,7 +73,7 @@ export default function ContactoPage() {
     },
     {
       title: t("contact.emailTitle"),
-      value: "soporte@add-host.com",
+      value: "soporte@sistemasavante.com",
       icon: Mail,
       color: "text-orange-500",
     },

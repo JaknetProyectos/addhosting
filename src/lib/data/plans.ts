@@ -39,7 +39,6 @@ export const plansSpanish = [
             "Acceso root completo",
             "Backups semanales automatizados",
         ],
-        highlighted: true,
     },
     {
         id: "plan-4",
@@ -79,7 +78,6 @@ export const plansSpanish = [
             "2TB de almacenamiento SSD",
             "Firewall avanzado",
         ],
-        highlighted: true,
     },
     {
         id: "plan-7",
@@ -93,7 +91,6 @@ export const plansSpanish = [
             "Soporte personalizado",
             "Panel de control personalizado",
         ],
-        highlighted: false,
     },
     {
         id: "plan-8",
@@ -108,7 +105,6 @@ export const plansSpanish = [
             "Panel de control personalizado",
             "Firewall avanzado",
         ],
-        highlighted: false,
     },
     {
         id: "plan-9",
@@ -124,7 +120,6 @@ export const plansSpanish = [
             "Panel de control personalizado",
             "Firewall avanzado",
         ],
-        highlighted: false,
     },
 
 
@@ -171,7 +166,6 @@ export const plansEnglish = [
             "Full root access",
             "Automated weekly backups",
         ],
-        highlighted: true,
     },
     {
         id: "plan-4",
@@ -211,7 +205,6 @@ export const plansEnglish = [
             "2TB SSD storage",
             "Advanced firewall",
         ],
-        highlighted: true,
     },
     {
         id: "plan-7",
@@ -225,7 +218,6 @@ export const plansEnglish = [
             "Personalized support",
             "Custom control panel",
         ],
-        highlighted: false,
     },
     {
         id: "plan-8",
@@ -240,7 +232,6 @@ export const plansEnglish = [
             "Custom control panel",
             "Advanced firewall",
         ],
-        highlighted: false,
     },
     {
         id: "plan-9",
@@ -256,6 +247,5 @@ export const plansEnglish = [
             "Custom control panel",
             "Advanced firewall",
         ],
-        highlighted: false,
     },
 ];

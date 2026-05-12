@@ -43,7 +43,7 @@ export function Header() {
             </div>
             <div className="flex flex-col leading-none">
               <span className="text-xl font-black tracking-tighter text-white uppercase italic">
-                ADD<span className="text-orange-500">+</span>HOST
+                Sistemas<span className="text-orange-500">+</span>Avante
               </span>
               <span className="text-[8px] font-bold tracking-[0.3em] text-zinc-500 uppercase">
                 {t("brand.infrastructure")}

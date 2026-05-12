@@ -127,7 +127,7 @@ export function Footer() {
                   <Mail className="w-5 h-5 text-orange-500 shrink-0" />
 
                   <span className="text-zinc-300 text-sm font-bold">
-                    soporte@add-host.com
+                    soporte@sistemasavante.com
                   </span>
                 </div>
               </div>
@@ -173,7 +173,7 @@ export function Footer() {
           <p className="text-zinc-600 text-[10px] font-black uppercase tracking-widest text-center lg:text-left">
             © {currentYear}{" "}
             <span className="text-zinc-400">
-              ADD HOST INFRASTRUCTURE
+              SISTEMAS AVANTE INFRASTRUCTURE
             </span>
             . {t("copyright")}
           </p>
