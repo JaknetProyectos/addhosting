@@ -18,6 +18,7 @@ import {
 import Link from "next/link";
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
 
 type CheckoutForm = {
   firstName: string;
@@ -734,10 +735,10 @@ export default function CarritoPage() {
                     )}
                   </button>
 
-                  <div className="mt-6 flex items-center justify-center gap-4 opacity-30 grayscale hover:grayscale-0 transition-all">
-                    <div className="text-[10px] font-bold border border-white px-1">VISA</div>
-                    <div className="text-[10px] font-bold border border-white px-1">MASTERCARD</div>
-                    <div className="text-[10px] font-bold border border-white px-1">AMEX</div>
+                  <div className="mt-6 flex items-center justify-center gap-4  hover:grayscale-0 transition-all">
+                    <Image src="/visa.png" width={50} height={30} alt="Visa" className="object-contain" />
+                    <Image src="/mastercard.png" width={50} height={30} alt="Visa" className="object-contain" />
+                    <Image src="/octano.png" width={120} height={130} alt="Visa" className="object-contain" />
                   </div>
                 </div>
               </div>

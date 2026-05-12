@@ -158,13 +158,7 @@ export function Footer() {
             </div>
 
             {/* Tech Badge */}
-            <div className="border border-zinc-800 px-4 py-1 rounded-md h-8 flex items-center gap-2">
-              <Globe2 className="w-4 h-4 text-green-500" />
 
-              <span className="text-zinc-500 font-bold text-[10px] uppercase">
-                {t("pciCompliant")}
-              </span>
-            </div>
           </div>
         </div>
 
