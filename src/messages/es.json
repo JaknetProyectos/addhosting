@@ -2,356 +2,356 @@
   "cart": {
     "header": {
       "titlePrefix": "Tu",
-      "titleHighlight": "Cesta"
+      "titleHighlight": "Carrito"
     },
     "success": {
-      "title": "¡Compra Realizada!",
-      "description": "Tu solicitud ha sido gestionada bajo el protocolo de protección vigente.",
-      "orderIdLabel": "Referencia:",
-      "emailSent": "✓ Recibo enviado a tu casilla de correo.",
-      "emailFailed": "⚠ Cobro efectuado, pero el servidor de envíos presenta demoras.",
-      "backHome": "Regresar al inicio"
+      "title": "¡Pedido Completado!",
+      "description": "Tu operación fue procesada siguiendo los protocolos de seguridad activos.",
+      "orderIdLabel": "Código:",
+      "emailSent": "✓ Confirmación enviada a tu correo electrónico.",
+      "emailFailed": "⚠ El pago fue aprobado, aunque el sistema de notificaciones presenta retrasos.",
+      "backHome": "Volver al inicio"
     },
     "empty": {
-      "title": "La cesta está desierta",
-      "description": "Aún no has agregado ninguna unidad de potencia a tu selección.",
-      "cta": "Ver Soluciones"
+      "title": "El carrito está vacío",
+      "description": "Todavía no agregas ningún servicio o producto a tu selección.",
+      "cta": "Explorar Servicios"
     },
     "review": {
-      "title": "Detalles de la Compra",
-      "clearAll": "Borrar contenido",
-      "sku": "Referencia:"
+      "title": "Resumen del Pedido",
+      "clearAll": "Eliminar todo",
+      "sku": "Código:"
     },
     "shipping": {
-      "title": "Datos de Entrega",
+      "title": "Información de Envío",
       "firstName": "Nombre",
-      "lastName": "Apellidos",
+      "lastName": "Apellido",
       "email": "Correo electrónico",
-      "phone": "Contacto Telefónico",
-      "postalCode": "Código Postal",
+      "phone": "Número telefónico",
+      "postalCode": "Código postal",
       "address": "Dirección",
       "city": "Ciudad",
-      "state": "Provincia/Estado"
+      "state": "Estado/Provincia"
     },
     "payment": {
-      "title": "Pasarela de Pago Blindada",
-      "cardName": "Titular de la Tarjeta",
-      "cardNumber": "Dígitos de la Tarjeta",
+      "title": "Sistema de Pago Seguro",
+      "cardName": "Nombre del Titular",
+      "cardNumber": "Número de Tarjeta",
       "cardNumberPlaceholder": "0000 0000 0000 0000",
-      "expiration": "Vencimiento (MM/AA)",
-      "cvv": "Código CVV"
+      "expiration": "Fecha de Expiración (MM/AA)",
+      "cvv": "Código de Seguridad CVV"
     },
     "summary": {
-      "titlePrefix": "Cómputo",
-      "titleHighlight": "Final",
-      "subtotal": "Suma parcial",
-      "iva": "Impuesto (16%)",
-      "totalLabel": "Monto total",
-      "secureConnection": "Enlace Cifrado",
-      "currencyLabel": "Moneda de Operación",
-      "currencyMXN": "Peso de México (MXN)",
-      "currencyUSD": "Dólar de EE.UU. (USD)",
-      "processing": "Ejecutando...",
-      "checkout": "Pagar Ahora"
+      "titlePrefix": "Resumen",
+      "titleHighlight": "Total",
+      "subtotal": "Subtotal",
+      "iva": "IVA (16%)",
+      "totalLabel": "Total a pagar",
+      "secureConnection": "Conexión Segura",
+      "currencyLabel": "Divisa de Pago",
+      "currencyMXN": "Peso Mexicano (MXN)",
+      "currencyUSD": "Dólar Estadounidense (USD)",
+      "processing": "Procesando solicitud...",
+      "checkout": "Finalizar Compra"
     },
     "errors": {
-      "firstNameRequired": "Es necesario el nombre.",
-      "lastNameRequired": "Es necesario el apellido.",
-      "emailRequired": "Se requiere una dirección de correo.",
-      "emailInvalid": "Formato de correo no válido.",
-      "phoneRequired": "Indica un número de contacto.",
-      "phoneInvalid": "El contacto debe oscilar entre 7 y 15 cifras.",
-      "addressRequired": "Escribe la ubicación.",
-      "cityRequired": "Escribe la localidad.",
-      "stateRequired": "Escribe la región.",
-      "countryRequired": "Elige el país.",
-      "postalCodeRequired": "Indica el código de zona.",
-      "postalCodeInvalid": "El código postal debe tener de 4 a 6 cifras.",
-      "currencyRequired": "Escoge el tipo de moneda.",
-      "cardNameRequired": "Indica quién es el titular.",
-      "cardNumberRequired": "Indica el número del plástico.",
-      "cardNumberInvalid": "La numeración debe ser de 16 caracteres exactamente.",
-      "cardMonthRequired": "Indica el mes.",
-      "cardMonthInvalid": "Rango de mes erróneo (01-12).",
-      "cardYearRequired": "Indica el año.",
-      "cardYearInvalid": "El año requiere 4 cifras.",
-      "cvvRequired": "Escribe el código de seguridad.",
-      "cvvInvalid": "El CVV requiere 3 o 4 cifras.",
-      "cartEmpty": "No hay artículos en la cesta.",
-      "transactionError": "Ocurrió un fallo al ejecutar el cobro."
+      "firstNameRequired": "Debes ingresar el nombre.",
+      "lastNameRequired": "Debes ingresar el apellido.",
+      "emailRequired": "Es obligatorio proporcionar un correo electrónico.",
+      "emailInvalid": "El formato del correo no es correcto.",
+      "phoneRequired": "Ingresa un teléfono de contacto.",
+      "phoneInvalid": "El número debe contener entre 7 y 15 dígitos.",
+      "addressRequired": "Proporciona la dirección.",
+      "cityRequired": "Indica la ciudad.",
+      "stateRequired": "Indica el estado o región.",
+      "countryRequired": "Selecciona un país.",
+      "postalCodeRequired": "Introduce el código postal.",
+      "postalCodeInvalid": "El código postal debe contener entre 4 y 6 dígitos.",
+      "currencyRequired": "Selecciona una moneda.",
+      "cardNameRequired": "Ingresa el nombre del titular.",
+      "cardNumberRequired": "Introduce el número de tarjeta.",
+      "cardNumberInvalid": "La tarjeta debe contener exactamente 16 dígitos.",
+      "cardMonthRequired": "Indica el mes de vencimiento.",
+      "cardMonthInvalid": "El mes debe encontrarse entre 01 y 12.",
+      "cardYearRequired": "Indica el año de vencimiento.",
+      "cardYearInvalid": "El año debe contener 4 dígitos.",
+      "cvvRequired": "Introduce el código de seguridad.",
+      "cvvInvalid": "El CVV debe contener 3 o 4 dígitos.",
+      "cartEmpty": "El carrito no contiene productos.",
+      "transactionError": "Se produjo un error al procesar el pago."
     }
   },
   "Navigation": {
     "brand": {
-      "infrastructure": "Sistemas de Alta Gama"
+      "infrastructure": "Infraestructura de Alto Nivel"
     },
     "nav": {
-      "home": "Principal",
-      "about": "Empresa",
-      "services": "Portafolio",
-      "plans": "Paquetes",
-      "contact": "Escríbenos"
+      "home": "Inicio",
+      "about": "Nosotros",
+      "services": "Servicios",
+      "plans": "Planes",
+      "contact": "Contacto"
     },
     "languages": {
       "en": "English",
       "es": "Spanish"
     },
     "mobile": {
-      "selectLanguage": "Cambiar Lenguaje"
+      "selectLanguage": "Seleccionar Idioma"
     }
   },
   "HeroSection": {
-    "badge": "Un gusto saludarte",
+    "badge": "Bienvenido",
     "title": {
-      "before": "Servicios de Alojamiento de",
-      "highlight": "Garantía"
+      "before": "Servicios de Hosting con",
+      "highlight": "Calidad"
     },
-    "description": "Nuestros especialistas <white>Jedi</white> velan por darte una asistencia superior, logrando que tu portal web permanezca activo y rinda óptimamente, tal como un <green>mecanismo</green> de precisión en la red.",
+    "description": "Nuestro equipo de especialistas <white>Jedi</white> trabaja para brindarte soporte premium, asegurando que tu sitio permanezca disponible y funcione eficientemente, como un <green>sistema</green> perfectamente sincronizado en línea.",
     "buttons": {
-      "startProject": "Comenzar Ahora",
-      "viewPlans": "Explorar Costos"
+      "startProject": "Iniciar Proyecto",
+      "viewPlans": "Consultar Planes"
     },
-    "scroll": "Bajar",
-    "imageAlt": "Cohete de Infraestructura"
+    "scroll": "Desplazar",
+    "imageAlt": "Cohete de Servidores"
   },
   "ServicesSection": {
-    "badge": "Arquitectura Vital",
+    "badge": "Infraestructura Estratégica",
     "title": {
       "before": "Nuestros",
-      "highlight": "Productos"
+      "highlight": "Servicios"
     },
-    "description": "Herramientas de puesta en marcha inmediata con respaldo total."
+    "description": "Soluciones listas para implementarse con soporte especializado."
   },
   "WhyChooseUsSection": {
-    "badge": "Liderando la vanguardia",
+    "badge": "Innovación constante",
     "title": {
-      "before": "Ventajas de",
-      "highlight": "Nosotros"
+      "before": "¿Por qué elegir",
+      "highlight": "nuestro servicio?"
     },
-    "description": "En <white>Sistemas Avante</white>, resaltamos por nuestro trato exclusivo, herramientas modernas y tarifas competitivas. Como custodios de tu entorno virtual, trabajamos para darte una fiabilidad digna de un <green>asistente robótico</green> y la rapidez de un <orange>viaje interestelar</orange>.",
+    "description": "En <white>Sistemas Avante</white>, sobresalimos por ofrecer atención personalizada, tecnología actualizada y precios accesibles. Como guardianes de tu ecosistema digital, buscamos proporcionarte estabilidad comparable a un <green>asistente automatizado</green> y la velocidad de un <orange>desplazamiento galáctico</orange>.",
     "benefits": {
-      "support": "Asistencia de Élite",
-      "security": "Protección Proactiva",
-      "uptime": "99.9% Disponibilidad Permanente"
+      "support": "Soporte Especializado",
+      "security": "Seguridad Inteligente",
+      "uptime": "99.9% de Disponibilidad"
     },
-    "verified": "Validado",
-    "cta": "Adquirir Ya",
+    "verified": "Certificado",
+    "cta": "Comprar Ahora",
     "status": {
-      "label": "Estado",
-      "value": "Sistemas OPERATIVOS"
+      "label": "Condición",
+      "value": "Sistemas ACTIVOS"
     }
   },
   "PlansSection": {
-    "badge": "Células de Alto Rendimiento",
+    "badge": "Soluciones de Alto Desempeño",
     "title": {
       "before": "Nuestros",
-      "highlight": "Modelos"
+      "highlight": "Planes"
     },
-    "description": "Creados para cubrir los requerimientos de diversos emprendimientos, desde proyectos novatos hasta firmas que desean potenciar su alcance web. <italic>¡Que la potencia de Sistemas Avante te respalde!</italic>",
-    "recommended": "Sugerido",
-    "plusVat": "+ Impuestos",
-    "specifications": "Ficha Técnica",
-    "addToCart": "Sumar a la Cesta",
+    "description": "Diseñados para adaptarse a distintos tipos de proyectos, desde nuevas iniciativas hasta empresas que desean fortalecer su presencia digital. <italic>¡Confía en la potencia de Sistemas Avante!</italic>",
+    "recommended": "Recomendado",
+    "plusVat": "+ IVA",
+    "specifications": "Especificaciones",
+    "addToCart": "Agregar al Carrito",
     "custom": {
       "title": {
         "before": "Plan",
-        "highlight": "A Medida"
+        "highlight": "Personalizado"
       },
-      "description": "Tarifa personalizada según los requisitos del cliente.",
-      "button": "Pedir Presupuesto"
+      "description": "Costo ajustado conforme a las necesidades del cliente.",
+      "button": "Solicitar Cotización"
     }
   },
   "AdditionalServices": {
-    "title1": "Complementos de",
-    "titleHighlight": "Soporte",
-    "description": "Potencia las virtudes de tu sistema. Utilidades pensadas para perfeccionar, blindar y expandir tu huella digital al nivel más alto.",
-    "addons": "Extensiones Disponibles",
-    "status": "Estado: Listo para Instalar",
-    "serial": "Nº Serie:",
-    "addToCart": "Sumar a la Cesta"
+    "title1": "Servicios de",
+    "titleHighlight": "Apoyo",
+    "description": "Lleva tu plataforma al siguiente nivel. Herramientas creadas para optimizar, proteger y ampliar tu presencia digital.",
+    "addons": "Complementos Disponibles",
+    "status": "Estado: Disponible para Implementación",
+    "serial": "Serie:",
+    "addToCart": "Agregar al Carrito"
   },
   "FAQ": {
-    "badge": "Consulta de Datos / FAQ",
-    "title": "Dudas",
-    "titleHighlight": "Comunes",
-    "description": "Manual de respuesta inmediata para aclarar tus inquietudes sobre nuestros servicios y estructura técnica.",
-    "knowledgeBase": "Repositorio_Datos v2.0",
-    "imageAlt": "Centro de información técnica"
+    "badge": "Preguntas Frecuentes / FAQ",
+    "title": "Preguntas",
+    "titleHighlight": "Frecuentes",
+    "description": "Centro de respuestas rápidas para resolver tus dudas sobre nuestras soluciones y capacidades técnicas.",
+    "knowledgeBase": "Base_Conocimiento v2.0",
+    "imageAlt": "Centro de soporte técnico"
   },
   "Footer": {
-    "mission": "Nuestro grupo de maestros Jedi se dedica a ofrecerte el mejor trato, asegurando que tu plataforma esté siempre en línea y opere sin fallos, como un sistema perfectamente calibrado en la red.",
-    "navigation": "Menú",
+    "mission": "Nuestro equipo de expertos Jedi trabaja para ofrecerte atención de calidad, manteniendo tu plataforma siempre disponible y funcionando con estabilidad, como una red perfectamente optimizada.",
+    "navigation": "Navegación",
     "home": "Inicio",
     "about": "Nosotros",
     "services": "Servicios",
-    "plans": "Tarifas",
+    "plans": "Planes",
     "contact": "Contacto",
-    "infrastructure": "Equipamiento",
-    "sharedHosting": "Hosting Grupal",
-    "vpsHosting": "Hosting Virtual (VPS)",
-    "dedicatedHosting": "Hosting Exclusivo",
-    "hqTerminal": "Nodo Central",
-    "securePayments": "Métodos de Pago Protegidos",
-    "pciCompliant": "Normativa PCI-DSS",
-    "copyright": "Derechos de Autor Reservados.",
-    "refund": "Devoluciones",
-    "terms": "Condiciones",
-    "privacy": "Confidencialidad",
-    "refundPolicy": "Normas de Reembolso",
-    "termsPolicy": "Términos del Servicio",
-    "privacyPolicy": "Aviso de Privacidad",
-    "secureTerminal": "Acceso Cifrado"
+    "infrastructure": "Infraestructura",
+    "sharedHosting": "Hosting Compartido",
+    "vpsHosting": "Servidor Virtual (VPS)",
+    "dedicatedHosting": "Servidor Dedicado",
+    "hqTerminal": "Centro Principal",
+    "securePayments": "Pagos Seguros",
+    "pciCompliant": "Cumplimiento PCI-DSS",
+    "copyright": "Todos los derechos reservados.",
+    "refund": "Reembolsos",
+    "terms": "Términos",
+    "privacy": "Privacidad",
+    "refundPolicy": "Política de Reembolso",
+    "termsPolicy": "Términos y Condiciones",
+    "privacyPolicy": "Política de Privacidad",
+    "secureTerminal": "Conexión Segura"
   },
   "ContactPage": {
     "hero": {
-      "badge": "Vía de Enlace / Conexión",
-      "title": "Canal de <orange>Soporte</orange><green>.</green>",
-      "description": "¿Requieres ayuda o tienes preguntas técnicas? Establece contacto con nuestro centro de atención. Estamos preparados para asistirte."
+      "badge": "Canal de Comunicación",
+      "title": "Centro de <orange>Atención</orange><green>.</green>",
+      "description": "¿Necesitas asistencia o tienes consultas técnicas? Comunícate con nuestro equipo especializado. Estamos listos para ayudarte."
     },
     "form": {
-      "title": "Enviar Mensaje",
-      "nameLabel": "Usuario / Nombre",
-      "namePlaceholder": "Escribe tu nombre aquí",
-      "emailLabel": "Contacto / Correo",
+      "title": "Enviar Consulta",
+      "nameLabel": "Nombre de Usuario",
+      "namePlaceholder": "Ingresa tu nombre",
+      "emailLabel": "Correo de Contacto",
       "emailPlaceholder": "usuario@dominio.com",
-      "subjectLabel": "Motivo del Contacto",
-      "subjectPlaceholder": "Ej. Dudas / Contrataciones",
-      "messageLabel": "Contenido",
-      "messagePlaceholder": "Describe tu requerimiento...",
-      "submit": "Transmitir Datos"
+      "subjectLabel": "Asunto",
+      "subjectPlaceholder": "Ej. Información / Ventas",
+      "messageLabel": "Mensaje",
+      "messagePlaceholder": "Cuéntanos tu solicitud...",
+      "submit": "Enviar Mensaje"
     },
     "success": {
-      "title": "¡Envío Exitoso!",
-      "description": "Se ha activado el proceso de respuesta."
+      "title": "¡Mensaje Enviado!",
+      "description": "Tu solicitud ha sido recibida correctamente."
     },
     "contact": {
-      "title": "Puntos de Encuentro",
-      "phoneTitle": "Línea Telefónica",
-      "emailTitle": "Buzón de Mensajería",
-      "addressTitle": "Ubicación de la Base"
+      "title": "Información de Contacto",
+      "phoneTitle": "Teléfono",
+      "emailTitle": "Correo Electrónico",
+      "addressTitle": "Dirección"
     },
     "status": {
-      "online": "Asistencia Activa",
-      "response": "Espera estimada: < 2h",
-      "server": "Salud de la Red",
-      "optimal": "ESTABLE"
+      "online": "Soporte Disponible",
+      "response": "Tiempo aproximado de respuesta: < 2h",
+      "server": "Estado de la Infraestructura",
+      "optimal": "ÓPTIMO"
     },
     "alert": {
-      "errorTitle": "Fallo",
-      "errorMessage": "Error en la secuencia de envío"
+      "errorTitle": "Error",
+      "errorMessage": "Ocurrió un problema durante el envío"
     }
   },
   "AboutPage": {
     "hero": {
-      "badge": "Información / Identidad",
+      "badge": "Conócenos",
       "title": "Quiénes <orange>Somos</orange><green>.</green>"
     },
-    "imageAlt": "Centro de Operaciones",
-    "floatingBadge": "Núcleo Activo",
+    "imageAlt": "Centro de Control",
+    "floatingBadge": "Sistema Activo",
     "content": {
-      "title": "Nuestra Diferencia",
-      "description": "En Sistemas Avante, nos distinguimos por un soporte excepcional, herramientas tecnológicas de punta y costos competitivos. Como protectores de tu activo digital, buscamos darte un servicio tan constante como un <green>droide de apoyo</green> y tan veloz como una <orange>propulsión luz</orange>."
+      "title": "Lo Que Nos Hace Diferentes",
+      "description": "En Sistemas Avante, destacamos por ofrecer soporte profesional, tecnología avanzada y precios competitivos. Como aliados de tu infraestructura digital, buscamos brindarte un servicio tan constante como un <green>robot asistente</green> y tan rápido como una <orange>velocidad lumínica</orange>."
     },
     "benefits": {
-      "title": "Virtudes de Red",
+      "title": "Ventajas Tecnológicas",
       "items": {
-        "support": "Atención Estelar",
-        "security": "Blindaje de Datos",
-        "uptime": "99.9% Tiempo de Actividad"
+        "support": "Soporte Premium",
+        "security": "Protección de Información",
+        "uptime": "99.9% de Disponibilidad"
       }
     }
   },
   "customPage": {
-    "badge": "Ajuste de Configuración v2.0",
+    "badge": "Configuración Personalizada v2.0",
     "title": {
       "part1": "Servicio",
-      "highlight": "Exclusivo"
+      "highlight": "Personalizado"
     },
-    "description": "Carga los datos de tu presupuesto particular para iniciar el cobro mediante el túnel seguro. Confirma que el número de ticket concuerde con el de tu ejecutivo.",
-    "imageAlt": "Módulo de soporte",
-    "securePayment": "Pasarela de Cobro Cifrada",
+    "description": "Ingresa la información de tu cotización personalizada para iniciar el pago mediante nuestra plataforma segura. Verifica que el folio coincida con el proporcionado por tu asesor.",
+    "imageAlt": "Centro de asistencia",
+    "securePayment": "Plataforma de Pago Segura",
     "currency": {
-      "label": "Tipo de Cambio",
-      "mxn": "Pesos (MXN)",
-      "usd": "Dólares (USD)"
+      "label": "Moneda",
+      "mxn": "Pesos Mexicanos (MXN)",
+      "usd": "Dólares Americanos (USD)"
     },
     "paymentType": {
-      "label": "Forma de Liquidación",
-      "total": "Cubrir Saldo Completo",
-      "partial": "Pago de Anticipo / Abono"
+      "label": "Método de Pago",
+      "total": "Pago Completo",
+      "partial": "Anticipo / Pago Parcial"
     },
     "folio": {
-      "label": "Código Identificador de Trámite",
+      "label": "Folio de Referencia",
       "placeholder": "Ej. 10293-AX"
     },
     "amount": {
-      "label": "Suma Final a Cubrir"
+      "label": "Monto a Pagar"
     },
-    "button": "Añadir a Pedidos",
+    "button": "Agregar al Carrito",
     "footer": {
-      "systemsReady": "Equipos en Línea"
+      "systemsReady": "Sistemas Operativos"
     },
     "alerts": {
-      "errorTitle": "Fallo detectado",
-      "incompleteProtocol": "Faltan datos. Llena todos los campos requeridos para continuar",
-      "invalidAmount": "La cifra de la operación no es válida"
+      "errorTitle": "Error detectado",
+      "incompleteProtocol": "Información incompleta. Completa todos los campos obligatorios para continuar",
+      "invalidAmount": "El monto ingresado no es válido"
     },
     "cart": {
-      "totalPayment": "Servicio a medida (Liquidación)",
-      "partialPayment": "Servicio a medida (Parcialidad)",
-      "folio": "Ticket",
-      "currency": "Divisa"
+      "totalPayment": "Servicio personalizado (Pago completo)",
+      "partialPayment": "Servicio personalizado (Pago parcial)",
+      "folio": "Folio",
+      "currency": "Moneda"
     }
   },
   "servicesPage": {
     "hero": {
-      "badge": "Listado de Soluciones v4.0",
-      "title": "Nuestro <orange>Catálogo</orange><green>.</green>",
-      "description": "Explora nuestra variedad de servicios técnicos preparados para cualquier reto informático en el sector."
+      "badge": "Catálogo de Servicios v4.0",
+      "title": "Nuestros <orange>Servicios</orange><green>.</green>",
+      "description": "Descubre nuestra gama de soluciones tecnológicas diseñadas para distintos desafíos digitales."
     },
     "shared": {
-      "class": "[ RANGO: APRENDIZ ]",
-      "title": "Alojamiento <orange>Multiusuario</orange>",
-      "description": "Perfecto para iniciar tu camino. Ofrecemos un espacio amigable y activos balanceados para que tu portal inicie con la presteza de una nave ligera, con costes ideales para emprendedores.",
-      "button": "Activar Nodo",
+      "class": "[ NIVEL: INICIAL ]",
+      "title": "Alojamiento <orange>Compartido</orange>",
+      "description": "Ideal para comenzar tu proyecto. Dispondrás de un entorno amigable y recursos equilibrados para que tu sitio funcione con rapidez y estabilidad, manteniendo costos accesibles.",
+      "button": "Iniciar Servicio",
       "imageAlt": "Hosting Compartido"
     },
     "vps": {
-      "class": "[ RANGO: CABALLERO ]",
+      "class": "[ NIVEL: AVANZADO ]",
       "title": "Servidor <green>Virtual (VPS)</green>",
-      "description": "Dominio absoluto sobre tu configuración. Ajusta tu entorno como si forjaras tu propia herramienta de defensa. Disfruta de potencia asignada y el margen de maniobra para misiones de alto tráfico.",
-      "button": "Pedir Acceso",
-      "imageAlt": "VPS Hosting"
+      "description": "Control total sobre tu infraestructura. Configura tu entorno con libertad y disfruta de recursos dedicados ideales para proyectos exigentes y sitios con tráfico elevado.",
+      "button": "Solicitar Servicio",
+      "imageAlt": "Servidor VPS"
     },
     "dedicated": {
-      "class": "[ RANGO: COMANDANCIA ]",
-      "title": "Servidor <orange>Físico (Dedicado)</orange>",
-      "description": "La autoridad máxima. Potencial ilimitado para flujos masivos de datos y protección de alto rango. Es disponer de tu propia central de mando para encarar cualquier volumen de operaciones.",
-      "button": "Montar Base",
-      "imageAlt": "Hosting Dedicado"
+      "class": "[ NIVEL: EMPRESARIAL ]",
+      "title": "Servidor <orange>Dedicado</orange>",
+      "description": "Máximo rendimiento y seguridad para operaciones de gran escala. Obtén una infraestructura exclusiva preparada para manejar cargas intensivas y procesos críticos.",
+      "button": "Implementar Servidor",
+      "imageAlt": "Servidor Dedicado"
     }
   },
   "cartDrawer": {
     "header": {
-      "title": "Inventario de Carga",
-      "session": "ID de Conexión Protegida:"
+      "title": "Resumen de Compra",
+      "session": "ID de Sesión Segura:"
     },
     "empty": {
-      "title": "Bodega sin Artículos",
-      "description": "A la espera de suministros..."
+      "title": "Carrito Vacío",
+      "description": "Esperando productos..."
     },
     "item": {
-      "serial": "Nº Serie:",
-      "tax": "+ Impuestos"
+      "serial": "Serie:",
+      "tax": "+ IVA"
     },
     "footer": {
-      "total": "Balance Final",
-      "taxNote": "Pendiente de tasas locales",
-      "checkout": "Confirmar Operación",
-      "clear": "Cancelar Todo (Vaciar)"
+      "total": "Total General",
+      "taxNote": "Impuestos locales no incluidos",
+      "checkout": "Proceder al Pago",
+      "clear": "Vaciar Carrito"
     },
     "button": {
-      "openCart": "Ver mi compra"
+      "openCart": "Abrir carrito"
     }
   }
 }
