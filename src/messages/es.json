@@ -1,5 +1,15 @@
 {
   "cart": {
+    "coupon": {
+      "title": "Código de cupón",
+      "placeholder": "Ingresa el código",
+      "apply": "Aplicar",
+      "remove": "Quitar",
+      "applied": "Cupón aplicado:",
+      "invalid": "El cupón no es válido",
+      "empty": "Ingresa un código de cupón",
+      "discount": "Descuento"
+    },
     "header": {
       "titlePrefix": "Tu",
       "titleHighlight": "Carrito"
@@ -198,8 +208,8 @@
     "terms": "Términos",
     "privacy": "Privacidad",
     "refundPolicy": "Política de Reembolso",
-    "termsPolicy": "Términos y Condiciones",
-    "privacyPolicy": "Política de Privacidad",
+    "termsPolicy": "Condiciones de Uso",
+    "privacyPolicy": "Aviso de privacidad",
     "secureTerminal": "Conexión Segura"
   },
   "ContactPage": {
@@ -306,7 +316,7 @@
   "servicesPage": {
     "hero": {
       "badge": "Catálogo de Servicios v4.0",
-      "title": "Nuestros <orange>Servicios</orange><green>.</green>",
+      "title": "Nuestros <orange>Productos</orange><green>.</green>",
       "description": "Descubre nuestra gama de soluciones tecnológicas diseñadas para distintos desafíos digitales."
     },
     "shared": {

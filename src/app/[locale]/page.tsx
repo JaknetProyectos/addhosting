@@ -8,6 +8,7 @@ import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 import { plansEnglish, plansSpanish } from "@/lib/data/plans";
 import { useLocale } from "next-intl";
+import OfferModal from "@/components/OfferModal";
 
 
 
@@ -16,16 +17,24 @@ export default function Home() {
   const locale = useLocale()
   const plans = locale == "es" ? plansSpanish : plansEnglish;
 
+
+
   return (
-    <main className="min-h-screen bg-[#0a0e1a]">
-      <Header />
-      <HeroSection />
-      <ServicesSection />
-      <WhyChooseUsSection />
-      <PlansSection plans={plans} />
-      <AdditionalServicesSection />
-      <FAQSection />
-      <Footer />
-    </main>
+    <>
+
+      <OfferModal />
+
+      <main className="min-h-screen bg-[#0a0e1a]">
+        <Header />
+        <HeroSection />
+        <ServicesSection />
+        <WhyChooseUsSection />
+        <PlansSection plans={plans} />
+        <AdditionalServicesSection />
+        <FAQSection />
+        <Footer />
+      </main>
+    </>
+
   );
 }

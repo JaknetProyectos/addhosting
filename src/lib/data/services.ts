@@ -2,7 +2,7 @@ export const fullServicesSpanish = [
   {
     id: "service-1",
     name: "Dominio .Com",
-    description: "Registro de dominio",
+    description: "Registro y configuración básica de dominio",
     price: 200.00,
     sku: "SEER-2510-0011-E024",
     features: [],
@@ -10,7 +10,7 @@ export const fullServicesSpanish = [
   {
     id: "service-2",
     name: "Hosting Compartido Basico",
-    description: "Almacenamiento web basico para sitios personales o microempresas",
+    description: "Alojamiento web accesible para sitios personales y pequeños negocios",
     price: 2200.00,
     sku: "SEER-2510-0012-5A4D",
     features: ["30 dias de servicio"],
@@ -18,7 +18,7 @@ export const fullServicesSpanish = [
   {
     id: "service-3",
     name: "Hosting Compartido Premium",
-    description: "Mayor velocidad, recursos y seguridad que el basico",
+    description: "Plan con mejores recursos y estabilidad para proyectos en crecimiento",
     price: 3600.00,
     sku: "SEER-2510-0013-3A01",
     features: ["30 dias de servicio"],
@@ -26,7 +26,7 @@ export const fullServicesSpanish = [
   {
     id: "service-4",
     name: "VPS Hosting (4 GB RAM / 100 GB SSD)",
-    description: "Servidor virtual para empresas pequenas/medianas",
+    description: "Servidor virtual pensado para operaciones pequeñas y medianas",
     price: 3500.00,
     sku: "SEER-2510-0014-648C",
     features: [],
@@ -34,7 +34,7 @@ export const fullServicesSpanish = [
   {
     id: "service-5",
     name: "VPS Hosting Avanzado (200 GB SSD)",
-    description: "Mayor capacidad y rendimiento",
+    description: "Mayor almacenamiento y recursos para cargas de trabajo más exigentes",
     price: 6000.00,
     sku: "SEER-2510-0015-8DD9",
     features: [],
@@ -42,7 +42,7 @@ export const fullServicesSpanish = [
   {
     id: "service-6",
     name: "Servidor Dedicado (16 GB RAM / 1 TB HDD)",
-    description: "Control total, ideal para empresas grandes",
+    description: "Infraestructura dedicada para proyectos con mayores necesidades operativas",
     price: 7500.00,
     sku: "SEER-2510-0016-F4C7",
     features: [],
@@ -50,7 +50,7 @@ export const fullServicesSpanish = [
   {
     id: "service-7",
     name: "Backup Automatizado",
-    description: "Sistema de respaldo de seguridad",
+    description: "Respaldos automáticos para proteger la información de tu proyecto",
     price: 800.00,
     sku: "SEER-2510-0017-D3D2",
     features: [],
@@ -58,7 +58,7 @@ export const fullServicesSpanish = [
   {
     id: "service-8",
     name: "Auditoria De Seguridad",
-    description: "Analisis de vulnerabilidades y buenas practicas",
+    description: "Revisión técnica orientada a detectar riesgos y mejorar configuraciones",
     price: 5000.00,
     sku: "SEER-2510-0018-47FB",
     features: [],
@@ -70,7 +70,7 @@ export const basicServicesSpanish = [
   {
     icon: "https://plus.unsplash.com/premium_vector-1745597561527-3dfb4a79289c?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Hosting Compartido",
-    description: "Ideal para pequeñas y medianas empresas que están iniciando su misión en el espacio digital.",
+    description: "Una alternativa práctica para pequeñas y medianas empresas que comienzan su presencia digital.",
     accent: "border-green-500/20",
     hoverAccent: "group-hover:border-green-500",
     tag: "Entry Level"
@@ -78,7 +78,7 @@ export const basicServicesSpanish = [
   {
     icon: "https://images.unsplash.com/vector-1756376915225-053728fb62c5?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "VPS Hosting",
-    description: "Para aquellos que necesitan más control y recursos dedicados, como un caballero Jedi que requiere su propio sable de luz personalizado.",
+    description: "Ideal para proyectos que requieren mayor control y recursos dedicados para operar con más flexibilidad.",
     accent: "border-orange-500/20",
     hoverAccent: "group-hover:border-orange-500",
     tag: "Pro Power"
@@ -86,7 +86,7 @@ export const basicServicesSpanish = [
   {
     icon: "https://plus.unsplash.com/premium_vector-1711987506355-41f69626a3a2?q=80&w=611&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Hosting Dedicado",
-    description: "Perfecto para grandes empresas y proyectos que demandan un rendimiento óptimo, similar a la Estrella de la Muerte en potencia.",
+    description: "Pensado para empresas y plataformas que necesitan recursos exclusivos y un entorno más robusto.",
     accent: "border-green-500/20",
     hoverAccent: "group-hover:border-green-500",
     tag: "Enterprise"
@@ -98,7 +98,7 @@ export const fullServicesEnglish = [
   {
     id: "service-1",
     name: ".Com Domain",
-    description: "Domain registration",
+    description: "Domain registration and basic setup",
     price: 200.00,
     sku: "SEER-2510-0011-E024",
     features: [],
@@ -106,7 +106,7 @@ export const fullServicesEnglish = [
   {
     id: "service-2",
     name: "Basic Shared Hosting",
-    description: "Basic web storage for personal websites or microbusinesses",
+    description: "Affordable web hosting for personal websites and small businesses",
     price: 2200.00,
     sku: "SEER-2510-0012-5A4D",
     features: ["30 days of service"],
@@ -114,7 +114,7 @@ export const fullServicesEnglish = [
   {
     id: "service-3",
     name: "Premium Shared Hosting",
-    description: "Greater speed, resources, and security than the basic plan",
+    description: "Enhanced resources and stability for growing projects",
     price: 3600.00,
     sku: "SEER-2510-0013-3A01",
     features: ["30 days of service"],
@@ -122,7 +122,7 @@ export const fullServicesEnglish = [
   {
     id: "service-4",
     name: "VPS Hosting (4 GB RAM / 100 GB SSD)",
-    description: "Virtual server for small and medium-sized businesses",
+    description: "Virtual server designed for small and medium-sized operations",
     price: 3500.00,
     sku: "SEER-2510-0014-648C",
     features: [],
@@ -130,7 +130,7 @@ export const fullServicesEnglish = [
   {
     id: "service-5",
     name: "Advanced VPS Hosting (200 GB SSD)",
-    description: "Greater capacity and performance",
+    description: "Expanded storage and resources for more demanding workloads",
     price: 6000.00,
     sku: "SEER-2510-0015-8DD9",
     features: [],
@@ -138,7 +138,7 @@ export const fullServicesEnglish = [
   {
     id: "service-6",
     name: "Dedicated Server (16 GB RAM / 1 TB HDD)",
-    description: "Full control, ideal for large companies",
+    description: "Dedicated infrastructure for projects with higher operational needs",
     price: 7500.00,
     sku: "SEER-2510-0016-F4C7",
     features: [],
@@ -146,7 +146,7 @@ export const fullServicesEnglish = [
   {
     id: "service-7",
     name: "Automated Backup",
-    description: "Security backup system",
+    description: "Automatic backup solution to help protect your project data",
     price: 800.00,
     sku: "SEER-2510-0017-D3D2",
     features: [],
@@ -154,7 +154,7 @@ export const fullServicesEnglish = [
   {
     id: "service-8",
     name: "Security Audit",
-    description: "Vulnerability analysis and best practices review",
+    description: "Technical review focused on identifying risks and improving configurations",
     price: 5000.00,
     sku: "SEER-2510-0018-47FB",
     features: [],
@@ -166,7 +166,7 @@ export const basicServicesEnglish = [
   {
     icon: "https://plus.unsplash.com/premium_vector-1745597561527-3dfb4a79289c?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Shared Hosting",
-    description: "Ideal for small and medium-sized businesses that are starting their mission in the digital space.",
+    description: "A practical option for small and medium-sized businesses building their digital presence.",
     accent: "border-green-500/20",
     hoverAccent: "group-hover:border-green-500",
     tag: "Entry Level"
@@ -174,7 +174,7 @@ export const basicServicesEnglish = [
   {
     icon: "https://images.unsplash.com/vector-1756376915225-053728fb62c5?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "VPS Hosting",
-    description: "For those who need more control and dedicated resources, like a Jedi Knight who requires their own custom lightsaber.",
+    description: "Suitable for projects that require more control and dedicated resources for flexible operation.",
     accent: "border-orange-500/20",
     hoverAccent: "group-hover:border-orange-500",
     tag: "Pro Power"
@@ -182,7 +182,7 @@ export const basicServicesEnglish = [
   {
     icon: "https://plus.unsplash.com/premium_vector-1711987506355-41f69626a3a2?q=80&w=611&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Dedicated Hosting",
-    description: "Perfect for large companies and projects that demand optimal performance, similar to the Death Star in power.",
+    description: "Built for companies and platforms that need exclusive resources and a more robust environment.",
     accent: "border-green-500/20",
     hoverAccent: "group-hover:border-green-500",
     tag: "Enterprise"

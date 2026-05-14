@@ -26,7 +26,7 @@ export default function CustomPaymentForm() {
 
   const [currency, setCurrency] = useState<"USD" | "MXN">("MXN");
   const [folio, setFolio] = useState("");
-  const [paymentType, setPaymentType] = useState<"total" | "partial">("total");
+  
   const [amount, setAmount] = useState("");
 
   const { showAlert } = useAlert();
@@ -55,12 +55,8 @@ export default function CustomPaymentForm() {
     }
 
     addItem({
-      id: `${folio}-${paymentType}-${currency}`,
-      name: t(
-        paymentType === "total"
-          ? "cart.totalPayment"
-          : "cart.partialPayment"
-      ),
+      id: `${folio}-${currency}`,
+      name: `Custom - ${folio}`,
       description: `${t("cart.folio")}: ${folio} | ${t(
         "cart.currency"
       )}: ${currency}`,
@@ -70,7 +66,6 @@ export default function CustomPaymentForm() {
 
     setFolio("");
     setAmount("");
-    setPaymentType("total");
   };
 
   return (
@@ -137,63 +132,7 @@ export default function CustomPaymentForm() {
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-50" />
 
                 <form onSubmit={handleAddToCart} className="space-y-8">
-                  <div className="grid md:grid-cols-2 gap-8">
-                    {/* Currency */}
-                    <div className="space-y-3">
-                      <label className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500 ml-1">
-                        <Coins className="w-3 h-3 text-orange-500" />
-                        {t("currency.label")}
-                      </label>
-
-                      <div className="relative">
-                        <select
-                          value={currency}
-                          onChange={(e) =>
-                            setCurrency(e.target.value as "USD" | "MXN")
-                          }
-                          className="w-full appearance-none bg-black border border-zinc-800 rounded-xl px-5 py-4 text-white font-bold focus:outline-none focus:border-green-500/50 transition-all cursor-pointer"
-                        >
-                          <option value="MXN">
-                            {t("currency.mxn")}
-                          </option>
-                          <option value="USD">
-                            {t("currency.usd")}
-                          </option>
-                        </select>
-
-                        <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-600 pointer-events-none" />
-                      </div>
-                    </div>
-
-                    {/* Payment Type */}
-                    <div className="space-y-3">
-                      <label className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500 ml-1">
-                        <CreditCard className="w-3 h-3 text-orange-500" />
-                        {t("paymentType.label")}
-                      </label>
-
-                      <div className="relative">
-                        <select
-                          value={paymentType}
-                          onChange={(e) =>
-                            setPaymentType(
-                              e.target.value as "total" | "partial"
-                            )
-                          }
-                          className="w-full appearance-none bg-black border border-zinc-800 rounded-xl px-5 py-4 text-white font-bold focus:outline-none focus:border-green-500/50 transition-all cursor-pointer"
-                        >
-                          <option value="total">
-                            {t("paymentType.total")}
-                          </option>
-                          <option value="partial">
-                            {t("paymentType.partial")}
-                          </option>
-                        </select>
-
-                        <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-600 pointer-events-none" />
-                      </div>
-                    </div>
-                  </div>
+      
 
                   {/* Folio */}
                   <div className="space-y-3">

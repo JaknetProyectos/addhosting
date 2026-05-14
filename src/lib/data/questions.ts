@@ -1,45 +1,45 @@
 export const faqsSpanish = [
     {
-        question: "Que hace a Sistemas Avante diferente de otros proveedores de hosting?",
-        answer: "En Sistemas Avante, nos sentimos como la Alianza Rebelde en la lucha por un servicio superior. Ofrecemos soporte estelar, uptime garantizado y seguridad avanzada, todo a precios competitivos. Nos comprometemos a ser tus aliados en cada paso del camino.",
+        question: "¿Qué hace a Sistemas Avante diferente de otros proveedores de hosting?",
+        answer: "En Sistemas Avante ofrecemos soporte confiable, monitoreo constante y soluciones enfocadas en estabilidad y seguridad, todo con precios competitivos. Nuestro objetivo es acompañarte y ayudarte a mantener tu proyecto en línea sin complicaciones.",
     },
     {
-        question: "Como puedo contactar al equipo de soporte?",
-        answer: "Puedes contactar a nuestro equipo de soporte en cualquier momento, correo electronico o linea telefonica directa. Estaremos alli para ti, como un maestro Jedi siempre dispuesto a guiar a su padawan.",
+        question: "¿Cómo puedo contactar al equipo de soporte?",
+        answer: "Puedes comunicarte con nuestro equipo de soporte mediante correo electrónico o línea telefónica directa. Buscamos brindarte atención clara y oportuna siempre que necesites ayuda.",
     },
     {
-        question: "Que medidas de seguridad utilizan para proteger mi sitio web?",
-        answer: "En Sistemas Avante, utilizamos una combinacion de tecnologias avanzadas, como firewalls, encriptacion y monitoreo constante, para proteger tu sitio web. Considera nuestras medidas de seguridad como un escudo deflector que mantiene a raya cualquier amenaza del Lado Oscuro.",
+        question: "¿Qué medidas de seguridad utilizan para proteger mi sitio web?",
+        answer: "Utilizamos herramientas y prácticas de seguridad como firewalls, cifrado y monitoreo continuo para ayudar a proteger tu sitio web y reducir riesgos de accesos no autorizados o amenazas comunes.",
     },
     {
-        question: "Cual es el proceso para migrar mi sitio web a Sistemas Avante?",
-        answer: "Migrar tu sitio web a Sistemas Avante es tan sencillo como pilotar un caza estelar con un buen copiloto. Nuestro equipo de expertos se encargara de todo el proceso de migracion para que puedas enfocarte en lo que realmente importa: hacer crecer tu negocio.",
+        question: "¿Cuál es el proceso para migrar mi sitio web a Sistemas Avante?",
+        answer: "Nuestro equipo te acompaña durante el proceso de migración para facilitar el traslado de tu sitio web y minimizar interrupciones, permitiéndote continuar con tus operaciones de forma más cómoda.",
     },
     {
-        question: "Que significa el 99.9% de uptime garantizado?",
-        answer: "El 99.9% de uptime garantizado significa que tu sitio web estara disponible y funcionando casi todo el tiempo, minimizando cualquier tiempo de inactividad. Es como tener tu nave espacial lista para el despegue en cualquier momento, asegurando que tus visitantes siempre puedan acceder a tu contenido.",
+        question: "¿Qué significa el 99.9% de uptime garantizado?",
+        answer: "Significa que trabajamos para mantener tu sitio web disponible y funcionando la mayor parte del tiempo, reduciendo al mínimo posibles interrupciones para que tus visitantes puedan acceder a tu contenido con normalidad.",
     },
 ];
 
 export const faqsEnglish = [
     {
         question: "What makes Sistemas Avante different from other hosting providers?",
-        answer: "At Sistemas Avante, we see ourselves as the Rebel Alliance in the fight for superior service. We offer stellar support, guaranteed uptime, and advanced security, all at competitive prices. We are committed to being your allies every step of the way.",
+        answer: "At Sistemas Avante, we provide reliable support, continuous monitoring, and solutions focused on stability and security, all at competitive prices. Our goal is to support you and help keep your project running smoothly online.",
     },
     {
         question: "How can I contact the support team?",
-        answer: "You can contact our support team at any time via email or direct phone line. We will be there for you, like a Jedi Master always ready to guide their padawan.",
+        answer: "You can reach our support team through email or direct phone line. We aim to provide clear and timely assistance whenever you need help.",
     },
     {
         question: "What security measures do you use to protect my website?",
-        answer: "At Sistemas Avante, we use a combination of advanced technologies such as firewalls, encryption, and constant monitoring to protect your website. Think of our security measures as a deflector shield that keeps any threat from the Dark Side at bay.",
+        answer: "We use security tools and best practices such as firewalls, encryption, and continuous monitoring to help protect your website and reduce the risk of unauthorized access or common threats.",
     },
     {
         question: "What is the process for migrating my website to Sistemas Avante?",
-        answer: "Migrating your website to Sistemas Avante is as simple as piloting a starfighter with a good co-pilot. Our team of experts will handle the entire migration process so you can focus on what really matters: growing your business.",
+        answer: "Our team assists you throughout the migration process to help transfer your website smoothly and minimize interruptions, allowing you to continue operating with confidence.",
     },
     {
         question: "What does the 99.9% guaranteed uptime mean?",
-        answer: "The 99.9% guaranteed uptime means that your website will be available and running almost all the time, minimizing any downtime. It is like having your spaceship ready for takeoff at any moment, ensuring that your visitors can always access your content.",
+        answer: "It means we work to keep your website available and running most of the time, minimizing potential interruptions so your visitors can consistently access your content.",
     },
 ];

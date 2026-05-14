@@ -176,15 +176,15 @@ export function Footer() {
             {[
               {
                 label: t("refundPolicy"),
-                href: "/reembolso",
+                href: "/legal/reembolsos",
               },
               {
                 label: t("termsPolicy"),
-                href: "/terminos",
+                href: "/legal/terminos",
               },
               {
                 label: t("privacyPolicy"),
-                href: "/privacidad",
+                href: "/legal/privacidad",
               },
             ].map((legal) => (
               <Link

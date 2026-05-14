@@ -1,5 +1,15 @@
 {
   "cart": {
+    "coupon": {
+      "title": "Coupon code",
+      "placeholder": "Enter coupon code",
+      "apply": "Apply",
+      "remove": "Remove",
+      "applied": "Coupon applied:",
+      "invalid": "Invalid coupon code",
+      "empty": "Enter a coupon code",
+      "discount": "Discount"
+    },
     "header": {
       "titlePrefix": "Your",
       "titleHighlight": "Cart"
@@ -198,8 +208,8 @@
     "terms": "Terms",
     "privacy": "Privacy",
     "refundPolicy": "Refund Policy",
-    "termsPolicy": "Terms Policy",
-    "privacyPolicy": "Privacy Policy",
+    "termsPolicy": "Terms of Use",
+    "privacyPolicy": "Privacy Notice",
     "secureTerminal": "Secure Terminal"
   },
   "ContactPage": {

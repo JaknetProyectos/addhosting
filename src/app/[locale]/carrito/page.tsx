@@ -41,6 +41,18 @@ type CheckoutForm = {
 
 type CheckoutErrors = Partial<Record<keyof CheckoutForm, string>>;
 
+type Coupon = {
+  code: string;
+  percentage: number; // decimal: 0.10 = 10%
+};
+
+// Cambia estos códigos aquí cuando quieras administrar tus cupones estáticos
+const STATIC_COUPONS: Coupon[] = [
+  { code: "DESC10", percentage: 0.1 },
+  { code: "DESC15", percentage: 0.15 },
+  { code: "VIP20", percentage: 0.2 },
+];
+
 export default function CarritoPage() {
   const t = useTranslations("cart");
   const { items, removeItem, updateQuantity, clearCart } = useCartStore();
@@ -53,6 +65,10 @@ export default function CarritoPage() {
   const [emailSent, setEmailSent] = useState<boolean | null>(null);
   const [formErrors, setFormErrors] = useState<CheckoutErrors>({});
   const locale = useLocale();
+
+  const [couponCode, setCouponCode] = useState("");
+  const [appliedCouponCode, setAppliedCouponCode] = useState("");
+  const [couponError, setCouponError] = useState("");
 
   const [form, setForm] = useState<CheckoutForm>({
     firstName: "",
@@ -81,8 +97,24 @@ export default function CarritoPage() {
     return items.reduce((total, item) => total + item.price * item.quantity, 0);
   }, [mounted, items]);
 
-  const iva = subtotal * 0.16;
-  const total = subtotal + iva;
+  const appliedCoupon = useMemo(() => {
+    if (!appliedCouponCode.trim()) return null;
+    return (
+      STATIC_COUPONS.find(
+        (coupon) =>
+          coupon.code.toUpperCase() === appliedCouponCode.trim().toUpperCase()
+      ) ?? null
+    );
+  }, [appliedCouponCode]);
+
+  const discountAmount = useMemo(() => {
+    if (!appliedCoupon) return 0;
+    return subtotal * appliedCoupon.percentage;
+  }, [appliedCoupon, subtotal]);
+
+  const taxableSubtotal = Math.max(subtotal - discountAmount, 0);
+  const iva = taxableSubtotal * 0.16;
+  const total = taxableSubtotal + iva;
 
   const money = (value: number) =>
     value.toLocaleString(locale === "en" ? "en-US" : "es-MX", {
@@ -100,6 +132,39 @@ export default function CarritoPage() {
     const nextValue = maxLength ? value.slice(0, maxLength) : value;
     setForm((prev) => ({ ...prev, [field]: nextValue }));
     if (checkoutError) setCheckoutError("");
+  };
+
+  const handleApplyCoupon = () => {
+    const normalized = couponCode.trim().toUpperCase();
+
+    if (!normalized) {
+      setCouponError(t("coupon.empty"));
+      return;
+    }
+
+    const found = STATIC_COUPONS.find(
+      (coupon) => coupon.code.toUpperCase() === normalized
+    );
+
+    if (!found) {
+      setAppliedCouponCode("");
+      setCouponError(t("coupon.invalid"));
+      return;
+    }
+
+    setAppliedCouponCode(found.code);
+    setCouponError("");
+  };
+
+  const handleRemoveCoupon = () => {
+    setCouponCode("");
+    setAppliedCouponCode("");
+    setCouponError("");
+  };
+
+  const handleClearCart = () => {
+    clearCart();
+    handleRemoveCoupon();
   };
 
   const validateForm = () => {
@@ -124,8 +189,6 @@ export default function CarritoPage() {
     if (!/^\d{4,6}$/.test(form.postalCode)) {
       errors.postalCode = t("errors.postalCodeInvalid");
     }
-
-    
 
     if (!form.cardName.trim()) errors.cardName = t("errors.cardNameRequired");
     if (!form.cardNumber.trim()) errors.cardNumber = t("errors.cardNumberRequired");
@@ -244,6 +307,10 @@ export default function CarritoPage() {
               quantity: item.quantity,
             })),
             subtotal,
+            discountAmount,
+            couponCode: appliedCoupon?.code ?? "",
+            couponPercentage: appliedCoupon?.percentage ?? 0,
+            taxableSubtotal,
             iva,
             total,
             currency: form.currency,
@@ -257,6 +324,7 @@ export default function CarritoPage() {
       }
 
       clearCart();
+      handleRemoveCoupon();
       setOrderId(newOrderId);
       setCheckoutComplete(true);
 
@@ -279,9 +347,7 @@ export default function CarritoPage() {
       });
     } catch (err) {
       const message =
-        err instanceof Error
-          ? err.message
-          : t("errors.transactionError");
+        err instanceof Error ? err.message : t("errors.transactionError");
       setCheckoutError(message);
     } finally {
       setIsCheckingOut(false);
@@ -316,7 +382,8 @@ export default function CarritoPage() {
               <ArrowLeft className="w-5 h-5" />
             </Link>
             <h1 className="text-4xl font-black tracking-tighter uppercase italic">
-              {t("header.titlePrefix")} <span className="text-orange-500">{t("header.titleHighlight")}</span>
+              {t("header.titlePrefix")}{" "}
+              <span className="text-orange-500">{t("header.titleHighlight")}</span>
               <span className="text-green-500">.</span>
             </h1>
           </div>
@@ -336,9 +403,7 @@ export default function CarritoPage() {
               {emailSent !== null && (
                 <div className="mb-8 mx-12 rounded-xl border border-zinc-800 bg-black p-4 text-sm">
                   <p className={emailSent ? "text-green-400" : "text-orange-400"}>
-                    {emailSent
-                      ? t("success.emailSent")
-                      : t("success.emailFailed")}
+                    {emailSent ? t("success.emailSent") : t("success.emailFailed")}
                   </p>
                 </div>
               )}
@@ -353,7 +418,9 @@ export default function CarritoPage() {
           ) : items.length === 0 ? (
             <div className="text-center py-24 bg-zinc-900/30 border border-dashed border-zinc-800 rounded-3xl">
               <ShoppingCart className="w-16 h-16 text-zinc-700 mx-auto mb-6" />
-              <h2 className="text-2xl font-bold text-zinc-300 mb-2">{t("empty.title")}</h2>
+              <h2 className="text-2xl font-bold text-zinc-300 mb-2">
+                {t("empty.title")}
+              </h2>
               <p className="text-zinc-500 mb-8">{t("empty.description")}</p>
               <Link
                 href="/planes"
@@ -374,7 +441,7 @@ export default function CarritoPage() {
                     </h2>
                     <button
                       type="button"
-                      onClick={clearCart}
+                      onClick={handleClearCart}
                       className="text-xs uppercase tracking-widest text-zinc-500 hover:text-orange-500 transition-colors"
                     >
                       {t("review.clearAll")}
@@ -458,10 +525,14 @@ export default function CarritoPage() {
                         value={form.firstName}
                         onChange={(e) => handleChange("firstName", e.target.value)}
                         className={`w-full bg-black border ${
-                          formErrors.firstName ? "border-red-500" : "border-zinc-800 focus:border-green-500"
+                          formErrors.firstName
+                            ? "border-red-500"
+                            : "border-zinc-800 focus:border-green-500"
                         } rounded-xl px-4 py-3 outline-none transition-all`}
                       />
-                      {formErrors.firstName && <p className="text-xs text-red-400">{formErrors.firstName}</p>}
+                      {formErrors.firstName && (
+                        <p className="text-xs text-red-400">{formErrors.firstName}</p>
+                      )}
                     </div>
 
                     <div className="space-y-2">
@@ -474,10 +545,14 @@ export default function CarritoPage() {
                         value={form.lastName}
                         onChange={(e) => handleChange("lastName", e.target.value)}
                         className={`w-full bg-black border ${
-                          formErrors.lastName ? "border-red-500" : "border-zinc-800 focus:border-green-500"
+                          formErrors.lastName
+                            ? "border-red-500"
+                            : "border-zinc-800 focus:border-green-500"
                         } rounded-xl px-4 py-3 outline-none transition-all`}
                       />
-                      {formErrors.lastName && <p className="text-xs text-red-400">{formErrors.lastName}</p>}
+                      {formErrors.lastName && (
+                        <p className="text-xs text-red-400">{formErrors.lastName}</p>
+                      )}
                     </div>
 
                     <div className="md:col-span-2 space-y-2">
@@ -490,10 +565,14 @@ export default function CarritoPage() {
                         value={form.email}
                         onChange={(e) => handleChange("email", e.target.value)}
                         className={`w-full bg-black border ${
-                          formErrors.email ? "border-red-500" : "border-zinc-800 focus:border-orange-500"
+                          formErrors.email
+                            ? "border-red-500"
+                            : "border-zinc-800 focus:border-orange-500"
                         } rounded-xl px-4 py-3 outline-none transition-all`}
                       />
-                      {formErrors.email && <p className="text-xs text-red-400">{formErrors.email}</p>}
+                      {formErrors.email && (
+                        <p className="text-xs text-red-400">{formErrors.email}</p>
+                      )}
                     </div>
 
                     <div className="space-y-2">
@@ -506,10 +585,14 @@ export default function CarritoPage() {
                         value={form.phone}
                         onChange={(e) => handleChange("phone", onlyDigits(e.target.value), 15)}
                         className={`w-full bg-black border ${
-                          formErrors.phone ? "border-red-500" : "border-zinc-800 focus:border-green-500"
+                          formErrors.phone
+                            ? "border-red-500"
+                            : "border-zinc-800 focus:border-green-500"
                         } rounded-xl px-4 py-3 outline-none transition-all`}
                       />
-                      {formErrors.phone && <p className="text-xs text-red-400">{formErrors.phone}</p>}
+                      {formErrors.phone && (
+                        <p className="text-xs text-red-400">{formErrors.phone}</p>
+                      )}
                     </div>
 
                     <div className="space-y-2">
@@ -520,12 +603,18 @@ export default function CarritoPage() {
                         type="text"
                         required
                         value={form.postalCode}
-                        onChange={(e) => handleChange("postalCode", onlyDigits(e.target.value), 6)}
+                        onChange={(e) =>
+                          handleChange("postalCode", onlyDigits(e.target.value), 6)
+                        }
                         className={`w-full bg-black border ${
-                          formErrors.postalCode ? "border-red-500" : "border-zinc-800 focus:border-green-500"
+                          formErrors.postalCode
+                            ? "border-red-500"
+                            : "border-zinc-800 focus:border-green-500"
                         } rounded-xl px-4 py-3 outline-none transition-all`}
                       />
-                      {formErrors.postalCode && <p className="text-xs text-red-400">{formErrors.postalCode}</p>}
+                      {formErrors.postalCode && (
+                        <p className="text-xs text-red-400">{formErrors.postalCode}</p>
+                      )}
                     </div>
 
                     <div className="md:col-span-2 space-y-2">
@@ -538,10 +627,14 @@ export default function CarritoPage() {
                         value={form.address}
                         onChange={(e) => handleChange("address", e.target.value)}
                         className={`w-full bg-black border ${
-                          formErrors.address ? "border-red-500" : "border-zinc-800 focus:border-green-500"
+                          formErrors.address
+                            ? "border-red-500"
+                            : "border-zinc-800 focus:border-green-500"
                         } rounded-xl px-4 py-3 outline-none transition-all`}
                       />
-                      {formErrors.address && <p className="text-xs text-red-400">{formErrors.address}</p>}
+                      {formErrors.address && (
+                        <p className="text-xs text-red-400">{formErrors.address}</p>
+                      )}
                     </div>
 
                     <div className="space-y-2">
@@ -554,10 +647,14 @@ export default function CarritoPage() {
                         value={form.city}
                         onChange={(e) => handleChange("city", e.target.value)}
                         className={`w-full bg-black border ${
-                          formErrors.city ? "border-red-500" : "border-zinc-800 focus:border-green-500"
+                          formErrors.city
+                            ? "border-red-500"
+                            : "border-zinc-800 focus:border-green-500"
                         } rounded-xl px-4 py-3 outline-none transition-all`}
                       />
-                      {formErrors.city && <p className="text-xs text-red-400">{formErrors.city}</p>}
+                      {formErrors.city && (
+                        <p className="text-xs text-red-400">{formErrors.city}</p>
+                      )}
                     </div>
 
                     <div className="space-y-2">
@@ -570,10 +667,14 @@ export default function CarritoPage() {
                         value={form.state}
                         onChange={(e) => handleChange("state", e.target.value)}
                         className={`w-full bg-black border ${
-                          formErrors.state ? "border-red-500" : "border-zinc-800 focus:border-green-500"
+                          formErrors.state
+                            ? "border-red-500"
+                            : "border-zinc-800 focus:border-green-500"
                         } rounded-xl px-4 py-3 outline-none transition-all`}
                       />
-                      {formErrors.state && <p className="text-xs text-red-400">{formErrors.state}</p>}
+                      {formErrors.state && (
+                        <p className="text-xs text-red-400">{formErrors.state}</p>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -597,7 +698,9 @@ export default function CarritoPage() {
                         onChange={(e) => handleChange("cardName", e.target.value)}
                         className="w-full bg-black border border-zinc-800 focus:border-orange-500 rounded-xl px-4 py-3 outline-none transition-all uppercase tracking-widest"
                       />
-                      {formErrors.cardName && <p className="text-xs text-red-400">{formErrors.cardName}</p>}
+                      {formErrors.cardName && (
+                        <p className="text-xs text-red-400">{formErrors.cardName}</p>
+                      )}
                     </div>
 
                     <div className="md:col-span-2 space-y-2">
@@ -609,11 +712,15 @@ export default function CarritoPage() {
                         required
                         maxLength={16}
                         value={form.cardNumber}
-                        onChange={(e) => handleChange("cardNumber", onlyDigits(e.target.value), 16)}
+                        onChange={(e) =>
+                          handleChange("cardNumber", onlyDigits(e.target.value), 16)
+                        }
                         className="w-full bg-black border border-zinc-800 focus:border-orange-500 rounded-xl px-4 py-3 outline-none transition-all font-mono tracking-[0.3em]"
                         placeholder={t("payment.cardNumberPlaceholder")}
                       />
-                      {formErrors.cardNumber && <p className="text-xs text-red-400">{formErrors.cardNumber}</p>}
+                      {formErrors.cardNumber && (
+                        <p className="text-xs text-red-400">{formErrors.cardNumber}</p>
+                      )}
                     </div>
 
                     <div className="space-y-2">
@@ -627,7 +734,9 @@ export default function CarritoPage() {
                           placeholder="MM"
                           maxLength={2}
                           value={form.cardMonth}
-                          onChange={(e) => handleChange("cardMonth", onlyDigits(e.target.value), 2)}
+                          onChange={(e) =>
+                            handleChange("cardMonth", onlyDigits(e.target.value), 2)
+                          }
                           className="w-full bg-black border border-zinc-800 focus:border-green-500 rounded-xl px-4 py-3 text-center outline-none"
                         />
                         <input
@@ -636,12 +745,18 @@ export default function CarritoPage() {
                           placeholder="YYYY"
                           maxLength={4}
                           value={form.cardYear}
-                          onChange={(e) => handleChange("cardYear", onlyDigits(e.target.value), 4)}
+                          onChange={(e) =>
+                            handleChange("cardYear", onlyDigits(e.target.value), 4)
+                          }
                           className="w-full bg-black border border-zinc-800 focus:border-green-500 rounded-xl px-4 py-3 text-center outline-none"
                         />
                       </div>
-                      {formErrors.cardMonth && <p className="text-xs text-red-400">{formErrors.cardMonth}</p>}
-                      {formErrors.cardYear && <p className="text-xs text-red-400">{formErrors.cardYear}</p>}
+                      {formErrors.cardMonth && (
+                        <p className="text-xs text-red-400">{formErrors.cardMonth}</p>
+                      )}
+                      {formErrors.cardYear && (
+                        <p className="text-xs text-red-400">{formErrors.cardYear}</p>
+                      )}
                     </div>
 
                     <div className="space-y-2">
@@ -657,7 +772,9 @@ export default function CarritoPage() {
                         className="w-full bg-black border border-zinc-800 focus:border-green-500 rounded-xl px-4 py-3 text-center outline-none font-mono"
                         placeholder="***"
                       />
-                      {formErrors.cvv && <p className="text-xs text-red-400">{formErrors.cvv}</p>}
+                      {formErrors.cvv && (
+                        <p className="text-xs text-red-400">{formErrors.cvv}</p>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -667,7 +784,8 @@ export default function CarritoPage() {
               <div className="lg:col-span-1">
                 <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 sticky top-32 shadow-2xl shadow-orange-500/5">
                   <h2 className="text-xl font-bold mb-6 italic uppercase tracking-tighter">
-                    {t("summary.titlePrefix")} <span className="text-orange-500">{t("summary.titleHighlight")}</span>
+                    {t("summary.titlePrefix")}{" "}
+                    <span className="text-orange-500">{t("summary.titleHighlight")}</span>
                   </h2>
 
                   <div className="space-y-4 mb-8">
@@ -675,20 +793,80 @@ export default function CarritoPage() {
                       <span>{t("summary.subtotal")}</span>
                       <span className="font-mono text-white">${money(subtotal)}</span>
                     </div>
+
+                    {appliedCoupon && discountAmount > 0 && (
+                      <div className="flex justify-between text-zinc-400">
+                        <span>{t("coupon.discount")}</span>
+                        <span className="font-mono text-green-400">
+                          -${money(discountAmount)}
+                        </span>
+                      </div>
+                    )}
+
                     <div className="flex justify-between text-zinc-400">
                       <span>{t("summary.iva")}</span>
                       <span className="font-mono text-white">${money(iva)}</span>
                     </div>
+
                     <div className="h-px bg-zinc-800 my-4" />
+
                     <div className="flex justify-between items-end">
-                      <span className="text-zinc-500 uppercase text-xs font-black">{t("summary.totalLabel")}</span>
+                      <span className="text-zinc-500 uppercase text-xs font-black">
+                        {t("summary.totalLabel")}
+                      </span>
                       <div className="text-right">
-                        <p className="text-3xl font-black text-green-500 leading-none">${money(total)}</p>
+                        <p className="text-3xl font-black text-green-500 leading-none">
+                          ${money(total)}
+                        </p>
                         <p className="text-[10px] text-zinc-600 mt-1 uppercase tracking-widest">
                           {form.currency} - {t("summary.secureConnection")}
                         </p>
                       </div>
                     </div>
+                  </div>
+
+                  <div className="mb-6">
+                    <label className="text-[10px] uppercase font-black text-zinc-500 mb-2 block tracking-widest">
+                      {t("coupon.title")}
+                    </label>
+
+                    <div className="flex w-full flex-col gap-2">
+                      <input
+                        type="text"
+                        value={couponCode}
+                        onChange={(e) => setCouponCode(e.target.value)}
+                        placeholder={t("coupon.placeholder")}
+                        className="flex-1 bg-black border border-zinc-800 rounded-xl px-3 py-2 text-sm outline-none focus:border-orange-500 uppercase tracking-wide"
+                      />
+                      <button
+                        type="button"
+                        onClick={handleApplyCoupon}
+                        className="px-4 py-2 rounded-xl bg-zinc-800 text-white text-xs uppercase font-bold tracking-widest hover:bg-zinc-700 transition-colors"
+                      >
+                        {t("coupon.apply")}
+                      </button>
+                    </div>
+
+                    {couponError && (
+                      <p className="text-xs text-red-400 mt-2">{couponError}</p>
+                    )}
+
+                    {appliedCoupon && !couponError && (
+                      <div className="mt-3 flex items-center justify-between gap-3 rounded-xl border border-green-500/20 bg-green-500/10 px-3 py-2">
+                        <p className="text-xs text-green-300">
+                          {t("coupon.applied")}{" "}
+                          <span className="font-mono font-bold">{appliedCoupon.code}</span>{" "}
+                          ({Math.round(appliedCoupon.percentage * 100)}%)
+                        </p>
+                        <button
+                          type="button"
+                          onClick={handleRemoveCoupon}
+                          className="text-[10px] uppercase tracking-widest text-green-300 hover:text-white transition-colors"
+                        >
+                          {t("coupon.remove")}
+                        </button>
+                      </div>
+                    )}
                   </div>
 
                   {/* <div className="mb-6">
@@ -735,10 +913,22 @@ export default function CarritoPage() {
                     )}
                   </button>
 
-                  <div className="mt-6 flex items-center justify-center gap-4  hover:grayscale-0 transition-all">
+                  <div className="mt-6 flex items-center justify-center gap-4 hover:grayscale-0 transition-all">
                     <Image src="/visa.png" width={50} height={30} alt="Visa" className="object-contain" />
-                    <Image src="/mastercard.png" width={50} height={30} alt="Visa" className="object-contain" />
-                    <Image src="/octano.png" width={120} height={130} alt="Visa" className="object-contain" />
+                    <Image
+                      src="/mastercard.png"
+                      width={50}
+                      height={30}
+                      alt="Mastercard"
+                      className="object-contain"
+                    />
+                    <Image
+                      src="/octano.png"
+                      width={120}
+                      height={130}
+                      alt="Octano"
+                      className="object-contain"
+                    />
                   </div>
                 </div>
               </div>
